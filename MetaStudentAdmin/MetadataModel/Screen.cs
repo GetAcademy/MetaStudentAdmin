@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MetaStudentAdmin.MetadataModel
+﻿namespace MetaStudentAdmin.MetadataModel
 {
-    internal class Screen
+    internal abstract class Screen : Component
     {
+        private Component _components;
     }
 }

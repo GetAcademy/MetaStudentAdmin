@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace MetaStudentAdmin.MetadataModel
 {
-    internal class Component
+    internal abstract class Component
     {
+        public string BuildHtml()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class ");
+            sb.Append(GetType().Name);
+            sb.Append(@" extends BaseComponent { 
+                constructor() {
+                    super();
+                    this.setStyle(this.getStyle());
+                    this.updateView();
+                }
+            ");
+            sb.Append("}");
+
+            return sb.ToString();
+        }
     }
 }

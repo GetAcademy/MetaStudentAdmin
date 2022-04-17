@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MetaStudentAdmin.MetadataModel
+﻿namespace MetaStudentAdmin.MetadataModel
 {
-    internal class Application
+    internal class Application : Component
     {
+        private Screen[] _screens;
+        private Screen _startScreen;
     }
 }
